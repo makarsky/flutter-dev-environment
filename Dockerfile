@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+# https://medium.com/flutter-community/how-to-dockerize-flutter-apps-f2e54d6ec43c
    
 # Prerequisites
 RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget
@@ -24,6 +25,6 @@ ENV PATH "$PATH:/home/developer/Android/sdk/platform-tools"
 # Download Flutter SDK
 RUN git clone https://github.com/flutter/flutter.git
 ENV PATH "$PATH:/home/developer/flutter/bin"
-   
+
 # Run basic check to download Dark SDK
 RUN flutter doctor
